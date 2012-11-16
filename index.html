@@ -492,7 +492,7 @@
 
 </ul>
 
-<h2 class="albums">Themes</h2>
+<h2 class="albums">Albums</h2>
 <ul class="outer">
 <li class="album"><ul><li class="title">CATT032 - Elite</li></ul></li>
 <li class="album"><ul><li class="title">CATT034 - Wap Elite</li></ul></li>
@@ -520,5 +520,50 @@
 <p class="footer">
     *a modest endeavour
 </p>
+
+<script src="js/jquery-1.8.1.min.js"></script> 
+<script>
+
+    $(document).ready(function() {
+        control.init();
+    });
+
+    control = {
+
+        init: function() {
+
+            //  start and end colours for the "singles"
+            var startColour = { r: 11, g: 161, b: 255 };
+            var endColour = { r: 0, g: 195, b: 0 };
+
+            var blocks = $('li.single');
+            var newR, newG, newB = 0;
+            for (var i = 0; i < blocks.length; i++) {
+                $(blocks[i]).css('background-color', 'rgb('
+                    + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
+                    + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ')'
+                );
+            }
+
+            //  same again for the "albums"
+            var startColour = { r: 255, g: 172, b: 8 };
+            var endColour = { r: 255, g: 0, b: 206 };
+
+            var blocks = $('li.album');
+            var newR, newG, newB = 0;
+            for (var i = 0; i < blocks.length; i++) {
+                $(blocks[i]).css('background-color', 'rgb('
+                    + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
+                    + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ')'
+                );
+            }
+
+        }
+
+    }
+</script>
+
 </body>
 </html>
