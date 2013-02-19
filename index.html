@@ -25,7 +25,7 @@
         h2 {
             margin-top: 0.5em;
             margin-bottom: 0.5em;
-            margin-left: 5%;
+            margin-left: 24px;
             font-size: 3em;
         }
 
@@ -37,486 +37,559 @@
             color: #FF55C8;
         }
 
+        h2.backcatalog {
+            color: #71C2C9;            
+        }
+
+        h2.deleted {
+            color: #404040;            
+        }
+
         ul {
             list-style: none;
             padding-left: 0;
         }
 
         ul.outer {
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 6em;
+            max-width: 1328px;
+            min-width: 700px;
         }
 
-        li.single,
-        li.album {
+        .singles li,
+        .albums li,
+        .backcatalog li,
+        .deleted li{
             background: #00B2FF;
             margin-bottom: 2em;
-            padding-bottom: 1em;
-            min-height: 4em;
+            margin-left: 24px;
+            margin-right: 24px;
+            min-height: 3.8em;
         }
 
-        li.album {
-            background: #FFA500;
-        }
-
-        li.single ul,
-        li.album ul {
-            padding-left: 6px;
-        }
-
-        li.title {
+        .title {
             color: #FFF;
             font-weight: bold;
             font-size: 2em;
+            margin-left: 6px;
+            margin-bottom: 0.5em;
         }
 
-        p.footer {
+        .panel {
+            position: relative;
+            overflow: hidden;
+            height: 112px;
+        }
+
+        .panel img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+        }
+
+        .linksout {
+            background: #00B2FF;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            padding-top: 2px;
+            padding-right: 6px;
+            padding-left: 4px;
+            padding-bottom: 6px;
+            -webkit-border-bottom-left-radius: 8px;
+            -moz-border-radius-bottomleft: 8px;
+            border-bottom-left-radius: 8px;
+            color: white;
+            font-size: 0.8em;
+        }
+
+        .title a,
+        .linksout a {
+            text-decoration: none;
+            color: inherit;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .description {
+            position: absolute;
+            bottom: 3px;
+            width: 100%;
+            background: rgba(11, 161, 255, 0.9);
+            color: white;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 1em;
+            line-height: 1.2em;
+            display: none;
+        }
+
+        .description p {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            margin-left: 6px;
+            margin-right: 4em;
+        }
+
+        a.disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .foot {
+            background: #00B2FF;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 3px;
+        }
+
+        .footer {
             margin-left: 5%;
             margin-bottom: 3em;
         }
+
     </style>
 </head>
 <body>
 
 <h1>CATT OPUS 23<sup>*</sup></h1>
 
-<h2 class="singles">Singles</h2>
-<ul class="outer">
-    <li class="single">
-        <ul>
-            <li class="title">CATCV - Dan Catt CV</li>
-        </ul>
+<ul class="outer singles">
+    
+    <h2 class="singles">Singles</h2>
+
+    <li>
+        <div class="title"><a href="#">CAT16 - Ant Attack in JS</a></div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT16.png" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://revdancatt.github.com/CAT16-ant-attack-in-js/">project page</a> | <a href="https://github.com/revdancatt/CAT16-ant-attack-in-js">github page</a></div>
+            <div class="description">
+                <p>A browers based recreation of the classic Spectrum game Ant Attack 3D</p>
+                <p>Technologies used: Javascript &amp; WebGL using Three.js</p>
+                <p>Progress: 60% complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT38 - Rotating Cobra Mk3 in Javascript</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT32.png" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://revdancatt.github.com/CAT38-rotating-cobra-mk-3/">project page</a> | <a href="https://github.com/revdancatt/CAT38-rotating-cobra-mk-3">github page</a></div>
+            <div class="description">
+                <p>A quick play to render an Elite Cobra Mk3 in simple javascript</p>
+                <p>Technologies used: Javascript &amp; Canvas</p>
+                <p>Progress: Complete (for the moment)</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT40 - Elite galaxy data in JSON format</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT40.png" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="#" class="disabled">project page</a> | <a href="https://github.com/revdancatt/CAT40-elite-json">github page</a></div>
+            <div class="description">
+                <p>
+                    Dump of all eight original Elite galaxies in JSON format, for use with a future as yet undecided web based game. Now that Elite is coming back as
+                    Elite Dangerous though I probably won't do much any time soon.
+                </p>
+                <p>Technologies used: Evil code scraping code, JSON</p>
+                <p>Progress: Complete (for the moment)</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT412 - Shared Access to David Cameron</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT412.jpg" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://www.kickstarter.com/projects/revdancatt/13757570?token=d1dd7857">project page</a> | <a href="#" class="disabled">github page</a></div>
+            <div class="description">
+                <p>
+                    Reaction to the "Cash for Access" scandal for the Twitters to enjoy.
+                </p>
+                <p>Technologies used: Kickstarter, Twitter, Humour</p>
+                <p>Progress: Complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT432 - Flambient</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT432.png" />
+            <div class="linksout"><a href="http://revdancatt.com/2012/03/31/the-pxl-effect-with-javascript-and-canvas-and-maths/">more information</a> | <a href="http://revdancatt.github.com/CAT434-flambient/">project page</a> | <a href="https://github.com/revdancatt/CAT434-flambient">github page</a></div>
+            <div class="description">
+                <p>
+                    An image rendering technique written in Javascript written so I could blow-up small thumbnail images into background wallpapers without suffering scaling issues.
+                </p>
+                <p>Technologies used: Javascript and Canvas</p>
+                <p>Progress: Complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT434 - Flambient - CRX Chrome extension</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT434.png" />
+            <div class="linksout"><a href="http://revdancatt.com/2012/04/12/a-chrome-extension-of-the-pxl-effect-for-flickr-githib-pages/">more information</a> | <a href="http://revdancatt.github.com/CAT434-flambient/">project page</a> | <a href="https://github.com/revdancatt/CAT434-flambient">github page</a></div>
+            <div class="description">
+                <p>
+                    A conversion of the Flambient javascript code into a Chrome Extension that works on Flickr.
+                </p>
+                <p>Technologies used: Javascript, Canvas and Chrome Extension CRX packaging</p>
+                <p>Progress: Complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT504 - What is the latest guardian headline JS</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT504.png" />
+            <div class="linksout"><a href="http://revdancatt.com/2010/11/10/what-is-the-latest-guardian-headline-dot-com/">more information</a> | <a href="https://github.com/revdancatt/CAT504-whatisthelatestguardianheadline-javascript">project page</a> | <a href="http://revdancatt.github.com/CAT504-whatisthelatestguardianheadline-javascript/">github page</a></div>
+            <div class="description">
+                <p>
+                    Port of an older Python Guardian Headline 2nd Screen experiment into javascript to get rid of the need for a backend.
+                </p>
+                <p>Technologies used: Javascript, jQuery, Typekit, Guardian Open Platform</p>
+                <p>Progress: Complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="title">CAT508 - Guardian Ambient Headline Radio</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT508.png" />
+            <div class="linksout"><a href="http://revdancatt.com/2012/04/25/guardian-ambient-headline-radio-the-definitive-blogpost/">more information</a> | <a href="http://revdancatt.github.com/CAT508-guardian-ambient-headline-radio/">project page</a> | <a href="https://github.com/revdancatt/CAT508-guardian-ambient-headline-radio">github page</a></div>
+            <div class="description">
+                <p>
+                    A drone web "radio station" that uses the &lt;audio&gt; tag and javascript text-to-speech to create a continuous ambient broadcast of the latest Guardian headlines.
+                    Also using the Flambient image effect to create the backgrounds.
+                </p>
+                <p>Technologies used: Javascript, HTML5 audio, Canvas, jQuery, Typekit, Guardian Open Platform, speak.js and pixastic.js</p>
+                <p>Progress: Complete</p>
+            </div>
+            <div class="foot"></div>
+        </div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT16 - Ant Attack in JS</li>
-        </ul>
+    <li>
+        <div class="title">CAT530 - Guardian Video Times</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT530.png" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://revdancatt.github.com/CAT530-guardian-video-times/">project page</a> | <a href="https://github.com/revdancatt/CAT530-guardian-video-times">github page</a></div>
+            <div class="description">
+                <p>
+                    Quick project to get an overview of when Guardian videos are published during the day and week, along with the sections they are published in.
+                </p>
+                <p>Technologies used: Javascript, jQuery, Guardian Open Platform</p>
+                <p>Progress: 60%</p>
+            </div>
+            <div class="foot"></div>
+        </div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT32 - WAP Elite</li>
-        </ul>
+    <li>
+        <div class="title">CAT540 - Guardian Picture Grid</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT540.jpg" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://guardianpicturegrid.appspot.com/">project page</a> | <a href="https://github.com/revdancatt/CAT540-guardian-picture-grid">github page</a></div>
+            <div class="description">
+                <p>
+                    A visual way of exploring the latest Guardian content, updates automatically via the Guardian API.
+                </p>
+                <p>Technologies used: Javascript, jQuery, Guardian Open Platform</p>
+                <p>Progress: 95%</p>
+            </div>
+            <div class="foot"></div>
+        </div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT38 - Rotating Cobra Mk3 in Javascript</li>
-        </ul>
+    <li>
+        <div class="title">CAT550 - The guardian last 24 hours by section</div>
+        <div class="panel">
+            <img class="banner" src="img/panel-CAT550.png" />
+            <div class="linksout"><a href="#" class="disabled">more information</a> | <a href="http://revdancatt.github.com/CAT550-last-24-hours-by-section/">project page</a> | <a href="https://github.com/revdancatt/CAT550-last-24-hours-by-section">github page</a></div>
+            <div class="description">
+                <p>
+                    Very quick hack to see how many articles have been published by the Guardian in each of their sections over the last 24 hours.
+                </p>
+                <p>Technologies used: Javascript, jQuery, Guardian Open Platform</p>
+                <p>Progress: 30%</p>
+            </div>
+            <div class="foot"></div>
+        </div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT40 - Elite galaxy data in JSON format</li>
-        </ul>
+    <li>
+        <div class="title">CAT580 - Guardian Year in review</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT42 - Small map exact of Galaxy 1</li>
-        </ul>
+    <li>
+        <div class="title">CAT702 - Catt &amp; Catt website</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT302 - AmbleBot</li>
-        </ul>
+    <li>
+        <div class="title">CAT714 - Robot Readable Repton</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT304 - Creative Commons Viewer</li>
-        </ul>
+    <li>
+        <div class="title">CAT716 - The taking and ultimate loss of blackgang chine in the last months of 2013</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT306 - Vomiting Panda 1</li>
-        </ul>
+    <li>
+        <div class="title">CAT720 - Face Colour Extractor (processing)</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT308 - Vomiting Panda 2</li>
-        </ul>
+    <li>
+        <div class="title">CAT722 - Face colours in JSON format</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT310 - Photo 1024 Newspaper</li>
-        </ul>
+    <li>
+        <div class="title">CAT724 - Face generator</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT320 - Photo 1024 Magazine</li>
-        </ul>
+    <li>
+        <div class="title">CAT724p2-x - Results of face generator</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT340 - IFFY (Interactive Flickr Fiction) </li>
-        </ul>
+    <li>
+        <div class="title">CAT740 - London Integers</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT410 - Kaiser Chiefs</li>
-        </ul>
+    <li>
+        <div class="title">CAT780 - Remixing Noon</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT412 - Shared Access to David Cameron</li>
-        </ul>
+    <li>
+        <div class="title">CAT1701 - Makies trousers</div>
     </li>
 
-    <li class="single">
-        <ul>
-            <li class="title">CAT414 - QR Zombies</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT420 - Glitch Auth</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT422 - Glitch Day</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT424 - Glitch Night</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT426 - Glitch Tools</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT430 - The Kibin Experiment</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT432 - Flambient</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT434 - Flambient - CRX Chrome extension</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT440 - The most statistically correct Kaiser Chiefs album</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT444 - Processing AR sketches</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT502 - What is the latest guardian headline</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT504 - What is the latest guardian headline JS</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT506 - What is the latest guardian headline new aesthetic</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT508 - Guardian Ambient Headline Radio</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT530 - Guardian Video Times</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT540 - Guardian Picture Grid</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT544 - Picture Desk Live</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT550 - The guardian last 24 hours by section</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT560 - The Brookertron</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT570 - Liveblog-o-matic</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT580 - Guardian Year in review</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT610 - Lodnon2102</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT702 - Catt & Catt website</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT712 - Fuel extractor</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT714 - Robot Readable Repton</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT716 - The taking and ultimate loss of blackgang chine in the last months of 2013</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT720 - Face Colour Extractor (processing)</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT722 - Face colours in JSON format</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT724 - Face generator</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT724p2-x - Results of face generator</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT740 - London Integers</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT770 - Robot Readable Repton</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT776 - How to do processing in javascript template</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT780 - Remixing Noon</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT1701 - Makies trousers</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT3002 - Newspaper club API test</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT5130 - Longer Reads admin panel</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT5150 - The Long Good Read website</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT32002 - WAP Elite 1bit ships</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT32004 - WAP Elite final map</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20080 - 2008 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20081 - 2008 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20090 - 2009 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20091 - 2009 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20100 - 2010 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20101 - 2010 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20110 - 2011 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20111 - 2011 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20120 - 2012 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20121 - 2012 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20130 - 2013 Lunar Wheel Calendar</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT20131 - 2013 Lunar Wheel Calendar - Print version</li>
-        </ul>
-    </li>
-
-    <li class="single">
-        <ul>
-            <li class="title">CAT37194399 - 3D plotted 37194399</li>
-        </ul>
+    <li>
+        <div class="title">CAT37194399 - 3D plotted 37194399</div>
     </li>
 
 </ul>
 
-<h2 class="albums">Albums</h2>
-<ul class="outer">
-<li class="album"><ul><li class="title">CATT032 - Elite</li></ul></li>
-<li class="album"><ul><li class="title">CATT034 - Wap Elite</li></ul></li>
-<li class="album"><ul><li class="title">CATT0100 - The university years</li></ul></li>
-<li class="album"><ul><li class="title">CATT0200 - The geobloggers years</li></ul></li>
-<li class="album"><ul><li class="title">CATT0300 - The Flickr years</li></ul></li>
-<li class="album"><ul><li class="title">CATT0500 - The Guardian years</li></ul></li>
-<li class="album"><ul><li class="title">CATT0700 - Catt & Catt Ltd</li></ul></li>
+<ul class="outer albums">
 
-<li class="album"><ul><li class="title">CATT0102 - Genetic algorithms</li></ul></li>
-<li class="album"><ul><li class="title">CATT0304 - Fluffykittens</li></ul></li>
-<li class="album"><ul><li class="title">CATT0310 - Photo 1024</li></ul></li>
-<li class="album"><ul><li class="title">CATT0420 - Glitch</li></ul></li>
-<li class="album"><ul><li class="title">CATT0510 - The Long Good Read</li></ul></li>
-<li class="album"><ul><li class="title">CATT0512 - Guardian Headlines</li></ul></li>
-<li class="album"><ul><li class="title">CATT0514 - Guardian Liveblogs</li></ul></li>
-<li class="album"><ul><li class="title">CATT0516 - Guardian Latest News</li></ul></li>
-<li class="album"><ul><li class="title">CATT0710 - Makie Dolls</li></ul></li>
-<li class="album"><ul><li class="title">CATT2000 - Lunar Wheel Calendar</li></ul></li>
-<li class="album"><ul><li class="title">CATT3000 - Newspaper</li></ul></li>
-<li class="album"><ul><li class="title">CATT3010 - Magazines</li></ul></li>
-<li class="album"><ul><li class="title">CATT3020 - Fanzines</li></ul></li>
+    <h2 class="albums">Albums</h2>
+
+    <li><div class="title">CATT032 - Elite</div></li>
+    <li><div class="title">CATT034 - Wap Elite</div></li>
+    <li><div class="title">CATT0100 - The university years</div></li>
+    <li><div class="title">CATT0200 - The geobloggers years</div></li>
+    <li><div class="title">CATT0300 - The Flickr years</div></li>
+    <li><div class="title">CATT0500 - The Guardian years</div></li>
+    <li><div class="title">CATT0700 - Catt &amp; Catt Ltd</div></li>
+
+    <li><div class="title">CATT0102 - Genetic algorithms</div></li>
+    <li><div class="title">CATT0304 - Fluffykittens</div></li>
+    <li><div class="title">CATT0310 - Photo 1024</div></li>
+    <li><div class="title">CATT0420 - Glitch</div></li>
+    <li><div class="title">CATT0510 - The Long Good Read</div></li>
+    <li><div class="title">CATT0512 - Guardian Headlines</div></li>
+    <li><div class="title">CATT0514 - Guardian Liveblogs</div></li>
+    <li><div class="title">CATT0516 - Guardian Latest News</div></li>
+    <li><div class="title">CATT0710 - Makie Dolls</div></li>
+    <li><div class="title">CATT2000 - Lunar Wheel Calendar</div></li>
+    <li><div class="title">CATT3000 - Newspaper</div></li>
+    <li><div class="title">CATT3010 - Magazines</div></li>
+    <li><div class="title">CATT3020 - Fanzines</div></li>
 </ul>
+
+<ul class="outer backcatalog">
+
+    <h2 class="backcatalog">Backcatalog - Delisted</h2>
+
+    <li>
+        <div class="title">CAT42 - Small map exact of Galaxy 1</div>
+    </li>
+
+    <li>
+        <div class="title">CAT306 - Vomiting Panda 1</div>
+    </li>
+
+    <li>
+        <div class="title">CAT310 - Photo 1024 Newspaper</div>
+    </li>
+
+    <li>
+        <div class="title">CAT320 - Photo 1024 Magazine</div>
+    </li>
+
+    <li>
+        <div class="title">CAT414 - QR Zombies</div>
+    </li>
+
+    <li>
+        <div class="title">CAT420 - Glitch Auth</div>
+    </li>
+
+    <li>
+        <div class="title">CAT422 - Glitch Day</div>
+    </li>
+
+    <li>
+        <div class="title">CAT424 - Glitch Night</div>
+    </li>
+
+    <li>
+        <div class="title">CAT426 - Glitch Tools</div>
+    </li>
+
+    <li>
+        <div class="title">CAT430 - The Kibin Experiment</div>
+    </li>
+
+    <li>
+        <div class="title">CAT440 - The most statistically correct Kaiser Chiefs album</div>
+    </li>
+
+    <li>
+        <div class="title">CAT444 - Processing AR sketches</div>
+    </li>
+
+    <li>
+        <div class="title">CAT506 - What is the latest guardian headline new aesthetic</div>
+    </li>
+
+    <li>
+        <div class="title">CAT570 - Liveblog-o-matic</div>
+    </li>
+
+    <li>
+        <div class="title">CAT610 - Lodnon2102</div>
+    </li>
+
+    <li>
+        <div class="title">CAT712 - Fuel extractor</div>
+    </li>
+
+    <li>
+        <div class="title">CAT776 - How to do processing in javascript template</div>
+    </li>
+
+    <li>
+        <div class="title">CAT5150 - The Long Good Read website</div>
+    </li>
+
+    <li>
+        <div class="title">CAT32002 - WAP Elite 1bit ships</div>
+    </li>
+
+    <li>
+        <div class="title">CAT32004 - WAP Elite final map</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20130 - 2013 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20131 - 2013 Lunar Wheel Calendar - Print version</div>
+    </li>
+
+</ul>
+
+
+
+<ul class="outer deleted">
+
+    <h2 class="deleted">Deleted</h2>
+
+    <li>
+        <div class="title">CAT32 - WAP Elite</div>
+    </li>
+
+    <li>
+        <div class="title">CAT302 - AmbleBot</div>
+    </li>
+
+    <li>
+        <div class="title">CAT304 - Creative Commons Viewer</div>
+    </li>
+
+    <li>
+        <div class="title">CAT308 - Vomiting Panda 2</div>
+    </li>
+
+    <li>
+        <div class="title">CAT340 - IFFY (Interactive Flickr Fiction)</div>
+    </li>
+
+    <li>
+        <div class="title">CAT502 - What is the latest guardian headline</div>
+    </li>
+
+    <li>
+        <div class="title">CAT560 - The Brookertron</div>
+    </li>
+
+    <li>
+        <div class="title">CAT5130 - Longer Reads admin panel</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20080 - 2008 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20081 - 2008 Lunar Wheel Calendar - Print version</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20090 - 2009 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20091 - 2009 Lunar Wheel Calendar - Print version</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20100 - 2010 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20101 - 2010 Lunar Wheel Calendar - Print version</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20110 - 2011 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20111 - 2011 Lunar Wheel Calendar - Print version</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20120 - 2012 Lunar Wheel Calendar</div>
+    </li>
+
+    <li>
+        <div class="title">CAT20121 - 2012 Lunar Wheel Calendar - Print version</div>
+    </li>
+</ul>
+
+
 
 <p class="footer">
     *a modest endeavour
@@ -537,30 +610,112 @@
             var startColour = { r: 11, g: 161, b: 255 };
             var endColour = { r: 0, g: 195, b: 0 };
 
-            var blocks = $('li.single');
+            var blocks = $('.singles li, .singles .linksout, .singles .description, .singles .foot');
             var newR, newG, newB = 0;
+            var newAlpha = 1;
             for (var i = 0; i < blocks.length; i++) {
-                $(blocks[i]).css('background-color', 'rgb('
+
+                if ($(blocks[i]).hasClass('description') || $(blocks[i]).hasClass('foot')) {
+                    newAlpha = 0.9;
+                } else {
+                    newAlpha = 1;
+                }
+
+                $(blocks[i]).css('background-color', 'rgba('
                     + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
                     + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
-                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ')'
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ', '
+                    + newAlpha + ')'
                 );
             }
+
 
             //  same again for the "albums"
             var startColour = { r: 255, g: 172, b: 8 };
             var endColour = { r: 255, g: 0, b: 206 };
 
-            var blocks = $('li.album');
-            var newR, newG, newB = 0;
+            blocks = $('.albums li, .albums .linksout, .albums .description');
+            newR, newG, newB = 0;
+            newAlpha = 1;
+
             for (var i = 0; i < blocks.length; i++) {
-                $(blocks[i]).css('background-color', 'rgb('
+
+                if ($(blocks[i]).hasClass('description') || $(blocks[i]).hasClass('foot')) {
+                    newAlpha = 0.9;
+                } else {
+                    newAlpha = 1;
+                }
+
+                $(blocks[i]).css('background-color', 'rgba('
                     + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
                     + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
-                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ')'
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ', '
+                    + newAlpha + ')'
                 );
             }
 
+
+            //  same again for the "backcataloged"
+            var startColour = { r: 196, g: 207, b: 27 };
+            var endColour = { r: 113, g: 194, b: 201 };
+
+            blocks = $('.backcatalog li, .backcatalog .linksout, .backcatalog .description');
+            newR, newG, newB = 0;
+            newAlpha = 1;
+
+            for (var i = 0; i < blocks.length; i++) {
+
+                if ($(blocks[i]).hasClass('description') || $(blocks[i]).hasClass('foot')) {
+                    newAlpha = 0.9;
+                } else {
+                    newAlpha = 1;
+                }
+
+                $(blocks[i]).css('background-color', 'rgba('
+                    + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
+                    + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ', '
+                    + newAlpha + ')'
+                );
+            }
+
+
+            //  same again for the "deleted"
+            var startColour = { r: 192, g: 192, b: 192 };
+            var endColour = { r: 64, g: 64, b: 64 };
+
+            blocks = $('.deleted li, .deleted .linksout, .deleted .description');
+            newR, newG, newB = 0;
+            newAlpha = 1;
+
+            for (var i = 0; i < blocks.length; i++) {
+
+                if ($(blocks[i]).hasClass('description') || $(blocks[i]).hasClass('foot')) {
+                    newAlpha = 0.9;
+                } else {
+                    newAlpha = 1;
+                }
+
+                $(blocks[i]).css('background-color', 'rgba('
+                    + Math.floor(startColour.r + (endColour.r - startColour.r) / blocks.length * i) + ', '
+                    + Math.floor(startColour.g + (endColour.g - startColour.g) / blocks.length * i) + ', '
+                    + Math.floor(startColour.b + (endColour.b - startColour.b) / blocks.length * i) + ', '
+                    + newAlpha + ')'
+                );
+            }
+
+
+
+            //  Asign the mouse over events
+            $('.outer li').bind('mouseenter', function() {
+                $(this).children('div.panel').stop(true, false).animate({ height: $(this).children('div.panel').children('img.banner').innerHeight()},  333);
+                $(this).children('div.panel').children('div.description').stop(true, false).fadeIn(333);
+            })
+
+            $('.outer li').bind('mouseleave', function() {
+                $(this).children('div.panel').stop(true, false).animate({ height: 112},  666);
+                $(this).children('div.panel').children('div.description').stop(true, false).fadeOut(666);
+            })
         }
 
     }
